@@ -14,15 +14,17 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/lucide-react: ESOCKETTIMEDOUT
-      at ClientRequest.eval (/usr/local/lib/node_modules/yarn/dist/yarn.js:125439:19)
-      at Object.onceWrapper (node:events:30:8244)
-      at ClientRequest.emit (node:events:30:11034)
-      at TLSSocket.emitRequestTimeout (node:_http_client:3:9392)
-      at Object.onceWrapper (node:events:30:8244)
-      at TLSSocket.emit (node:events:30:11150)
-      at Socket._onTimeout (node:net:292:14991)
-      at <anonymous> (node:internal/timers:253:4719)
+  Error: https://registry.yarnpkg.com/react: socket hang up
+      at TLSSocket.socketOnEnd (https://j9hsf5g8r4y1549jb1c2vwks6jcrow-tu3u.w-credentialless-staticblitz.com/builtins.97a3df4f.js:3:5909)
+      at TLSSocket.emit (https://j9hsf5g8r4y1549jb1c2vwks6jcrow-tu3u.w-credentialless-staticblitz.com/builtins.97a3df4f.js:30:11150)
+      at endReadableNT (https://j9hsf5g8r4y1549jb1c2vwks6jcrow-tu3u.w-credentialless-staticblitz.com/builtins.97a3df4f.js:230:10631)
+      at processTicksAndRejections (https://j9hsf5g8r4y1549jb1c2vwks6jcrow-tu3u.w-credentialless-staticblitz.com/builtins.97a3df4f.js:196:1067)
+      at https://j9hsf5g8r4y1549jb1c2vwks6jcrow-tu3u.w-credentialless-staticblitz.com/blitz.365214aa.js:31:296263
+      at _0x1f01c9 (https://j9hsf5g8r4y1549jb1c2vwks6jcrow-tu3u.w-credentialless-staticblitz.com/blitz.365214aa.js:31:296344)
+      at _0x3e75dc (https://j9hsf5g8r4y1549jb1c2vwks6jcrow-tu3u.w-credentialless-staticblitz.com/blitz.365214aa.js:31:535714)
+      at https://j9hsf5g8r4y1549jb1c2vwks6jcrow-tu3u.w-credentialless-staticblitz.com/blitz.365214aa.js:31:535498
+      at Array.forEach (<anonymous>)
+      at _0x3c5a49 (https://j9hsf5g8r4y1549jb1c2vwks6jcrow-tu3u.w-credentialless-staticblitz.com/blitz.365214aa.js:31:535247)
 
 npm manifest: 
   {
