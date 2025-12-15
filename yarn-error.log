@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/framer-motion: ESOCKETTIMEDOUT
+  Error: https://registry.yarnpkg.com/lucide-react: ESOCKETTIMEDOUT
       at ClientRequest.eval (/usr/local/lib/node_modules/yarn/dist/yarn.js:125439:19)
       at Object.onceWrapper (node:events:30:8244)
       at ClientRequest.emit (node:events:30:11034)
