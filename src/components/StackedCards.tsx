@@ -176,7 +176,7 @@ const Card: React.FC<CardProps> = ({ i, title, description, features, Visual, pr
     <div ref={containerRef} className="h-screen flex items-center justify-center sticky top-0">
       <motion.div 
         style={{ scale, opacity, top: `calc(-5% + ${i * 25}px)` }} 
-        className="relative flex flex-col md:flex-row gap-8 md:gap-12 w-full max-w-6xl h-[60vh] md:h-[550px] bg-[#0A0A0A] border border-white/10 rounded-[32px] p-6 md:p-12 shadow-2xl overflow-hidden origin-top"
+        className="relative flex flex-col md:flex-row gap-8 md:gap-12 w-full max-w-6xl h-[60vh] md:h-[550px] bg-gradient-to-br from-[#0A0A0A] to-[#050505] border border-white/10 rounded-[32px] p-6 md:p-12 shadow-2xl overflow-hidden origin-top"
       >
         {/* Layout Switch based on index (Alternating) */}
         <div className={cn("flex flex-col md:flex-row w-full h-full gap-8 md:gap-12", i % 2 === 0 ? "" : "md:flex-row-reverse")}>

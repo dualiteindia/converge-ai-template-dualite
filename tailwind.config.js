@@ -9,30 +9,11 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
-      colors: {
-        background: '#050505', // Very dark background
-        // Overriding default palettes with specific brand colors
-        blue: {
-          400: '#3FA9FE',
-          500: '#0D8DFD', // Brand Blue
-          600: '#0270C5',
-          900: '#002B4D',
-          950: '#001526',
-        },
-        orange: {
-          400: '#E64D42',
-          500: '#CB342A', // Brand Orange
-          600: '#A32219',
-          900: '#4D0F0B',
-        }
-      },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-      },
       animation: {
         scroll: 'scroll 60s linear infinite', 
         'scroll-reverse': 'scroll-reverse 60s linear infinite',
         liquid: 'liquid 15s ease-in-out infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       keyframes: {
         scroll: {

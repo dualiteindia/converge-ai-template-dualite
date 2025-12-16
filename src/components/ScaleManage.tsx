@@ -34,7 +34,7 @@ const Sidebar = ({ activeIndex }: { activeIndex: number }) => (
       <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-600 to-black p-[1px]">
         <div className="w-full h-full rounded-full bg-black/40 backdrop-blur-sm" />
       </div>
-      <span className="text-white font-medium">Fusion AI</span>
+      <span className="text-white font-medium">Converge AI</span>
       <div className="ml-auto border border-white/10 rounded p-1">
          <div className="w-3 h-3 border-2 border-gray-500 rounded-sm" />
       </div>
@@ -104,7 +104,7 @@ const AnalyticsView = () => (
     </div>
 
     {/* Leaderboard */}
-    <div className="flex-1 bg-[#0A0A0A] border border-white/5 rounded-xl p-6 overflow-hidden">
+    <div className="flex-1 bg-gradient-to-br from-[#0A0A0A] to-[#050505] border border-white/5 rounded-xl p-6 overflow-hidden">
       <h4 className="text-sm font-medium text-gray-300 mb-6">Agent Performance Leaderboard</h4>
       
       <div className="w-full">
@@ -120,7 +120,7 @@ const AnalyticsView = () => (
             { name: "Sarah Chen", conv: "284", time: "1.2s", sat: 96 },
             { name: "Mike Rodriguez", conv: "267", time: "1.4s", sat: 94 },
             { name: "AI Assistant", conv: "1847", time: "0.8s", sat: 89 },
-            { name: "Fusion AI", conv: "1823", time: "0.8s", sat: 89 },
+            { name: "Converge AI", conv: "1823", time: "0.8s", sat: 89 },
           ].map((row, i) => (
             <div key={i} className="grid grid-cols-4 text-sm items-center group">
               <div className="text-white truncate pr-2">{row.name}</div>
@@ -350,7 +350,7 @@ export const ScaleManage = () => {
         </div>
 
         {/* Dashboard Window */}
-        <div className="relative w-full max-w-6xl aspect-[16/9] md:aspect-[16/8] bg-[#050505] border border-white/10 rounded-3xl flex overflow-hidden shadow-2xl z-10">
+        <div className="relative w-full max-w-6xl aspect-[16/9] md:aspect-[16/8] bg-gradient-to-br from-[#050505] to-[#080808] border border-white/10 rounded-3xl flex overflow-hidden shadow-2xl z-10">
           <Sidebar activeIndex={activeIndex} />
           <div className="flex-1 relative bg-[#050505] overflow-hidden">
             <AnimatePresence mode="wait">

@@ -5,14 +5,31 @@ import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { AboutUs } from './pages/AboutUs';
 import { Pricing } from './pages/Pricing';
+import { Blogs } from './pages/Blogs';
+import { BlogPost } from './pages/BlogPost';
+import { Contact } from './pages/Contact';
+import { Waitlist } from './pages/Waitlist';
+import { PrivacyPolicy } from './pages/PrivacyPolicy';
+import { TermsConditions } from './pages/TermsConditions';
+import { Integrations } from './pages/Integrations';
+import { NotFound } from './pages/NotFound';
 
-// ScrollToTop component to handle scroll reset on route change
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
+const ScrollToAnchor = () => {
+  const { pathname, hash } = useLocation();
 
   React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (hash) {
+      const id = hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
 
   return null;
 };
@@ -20,35 +37,23 @@ const ScrollToTop = () => {
 function App() {
   return (
     <Router>
-      <ScrollToTop />
-      <div className="min-h-screen bg-[#050505] text-white selection:bg-orange-500/30 font-sans overflow-x-hidden relative">
-        
-        {/* Global Animated Background */}
-        <div className="fixed inset-0 z-0 pointer-events-none">
-          {/* Liquid Gradient: Blue (#0D8DFD) to Orange (#CB342A) */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0D8DFD]/20 via-[#050505] to-[#CB342A]/20 bg-[length:200%_200%] animate-liquid" />
-          
-          {/* Radial Vignette */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#050505_90%)] opacity-90" />
-          
-          {/* Noise Texture */}
-          <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
-        </div>
-
-        {/* Content Wrapper */}
-        <div className="relative z-10 flex flex-col min-h-screen">
-          <Navbar />
-          
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<AboutUs />} />
-              <Route path="/pricing" element={<Pricing />} />
-            </Routes>
-          </main>
-
-          <Footer />
-        </div>
+      <ScrollToAnchor />
+      <div className="min-h-screen bg-[#050505] text-white selection:bg-orange-500/30 font-sans overflow-x-hidden">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/waitlist" element={<Waitlist />} />
+          <Route path="/integrations" element={<Integrations />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
       </div>
     </Router>
   );

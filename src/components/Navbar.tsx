@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { GradientBorder } from './ui/GradientBorder';
+import { RollingText } from './ui/RollingText';
 
 const NavLink = ({ children, href = "#", to }: { children: React.ReactNode; href?: string; to?: string }) => {
   if (to) {
     return (
       <Link 
         to={to} 
-        className="text-gray-400 hover:text-white text-sm font-medium transition-colors duration-200"
+        className="text-gray-300 hover:text-white text-sm font-medium transition-colors duration-200"
       >
         {children}
       </Link>
@@ -16,7 +17,7 @@ const NavLink = ({ children, href = "#", to }: { children: React.ReactNode; href
   return (
     <a 
       href={href} 
-      className="text-gray-400 hover:text-white text-sm font-medium transition-colors duration-200"
+      className="text-gray-300 hover:text-white text-sm font-medium transition-colors duration-200"
     >
       {children}
     </a>
@@ -26,33 +27,36 @@ const NavLink = ({ children, href = "#", to }: { children: React.ReactNode; href
 export const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-6 w-full max-w-7xl mx-auto">
-      <div className="flex items-center justify-between bg-black/20 backdrop-blur-sm border border-white/10 rounded-full px-6 py-3">
+      <div className="flex items-center justify-between bg-black/50 backdrop-blur-md rounded-full px-6 py-3 border border-white/10 shadow-xl">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3">
-          <div className="relative w-6 h-6 rounded-full overflow-hidden shadow-[0_0_15px_rgba(59,130,246,0.6)]">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-blue-600 to-black rounded-full"></div>
-            <div className="absolute top-1 left-1 w-2 h-2 bg-blue-300 rounded-full blur-[1px] opacity-70"></div>
+        <Link to="/" className="flex items-center gap-3 group">
+          <div className="relative w-8 h-8 rounded-full overflow-hidden shadow-[0_0_15px_rgba(77,121,255,0.6)]">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-orange-500 rounded-full animate-spin [animation-duration:10s]"></div>
+            <div className="absolute inset-[2px] bg-black rounded-full"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+               <div className="w-2 h-2 bg-white rounded-full shadow-[0_0_10px_white]"></div>
+            </div>
           </div>
-          <span className="text-white font-bold text-lg tracking-tight">Fusion AI</span>
+          <span className="text-white font-bold text-lg tracking-tight">Converge AI</span>
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           <NavLink to="/about">About us</NavLink>
           <NavLink to="/pricing">Pricing</NavLink>
-          <NavLink href="#">Integration</NavLink>
-          <NavLink href="#">Blog</NavLink>
-          <NavLink href="#">Contact</NavLink>
-          <NavLink href="#">Waitlist</NavLink>
+          <NavLink to="/integrations">Integration</NavLink>
+          <NavLink to="/blogs">Blog</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/waitlist">Waitlist</NavLink>
         </div>
 
         {/* CTA */}
         <GradientBorder 
-          gradient="from-orange-500/80 via-red-500/80 to-orange-500/80"
+          gradient="from-orange-500 via-red-500 to-orange-600"
           containerClassName="rounded-full"
         >
-          <button className="px-5 py-2 text-white text-sm font-medium bg-black/90 hover:bg-black transition-colors rounded-full">
-            Get Started
+          <button className="px-5 py-2 text-white text-sm font-medium bg-transparent hover:bg-white/10 transition-colors rounded-full group">
+            <RollingText text="Get Started" />
           </button>
         </GradientBorder>
       </div>

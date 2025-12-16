@@ -1,10 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { 
-  MessageSquare, 
-  Plus, 
   Sparkles, 
-  Send,
   ChevronDown,
   Globe,
   Mail,
@@ -101,7 +98,7 @@ export const InteractiveDemo = () => {
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative w-full max-w-[1100px] h-[750px] bg-[#030303] rounded-3xl border border-white/10 shadow-2xl overflow-hidden flex"
+        className="relative w-full max-w-[1100px] h-[750px] bg-gradient-to-br from-[#030303] to-[#080808] rounded-3xl border border-white/10 shadow-2xl overflow-hidden flex"
       >
         {/* Animated Border Beam */}
         <div className="absolute inset-0 pointer-events-none rounded-3xl overflow-hidden">
@@ -111,7 +108,7 @@ export const InteractiveDemo = () => {
         </div>
         
         {/* Inner Border to hide the beam overflow inside */}
-        <div className="absolute inset-[1px] bg-[#030303] rounded-[23px] z-0" />
+        <div className="absolute inset-[1px] bg-gradient-to-br from-[#030303] to-[#080808] rounded-[23px] z-0" />
 
         {/* --- LEFT SIDEBAR --- */}
         <div className="relative z-10 w-72 bg-[#050505] border-r border-white/5 flex flex-col p-6 hidden md:flex">
@@ -128,7 +125,7 @@ export const InteractiveDemo = () => {
             <div className="relative w-6 h-6 rounded-full bg-gradient-to-br from-blue-600 to-black overflow-hidden shadow-lg shadow-blue-900/20">
                <div className="absolute inset-0 bg-black/20" />
             </div>
-            <span className="text-white font-semibold text-lg tracking-tight">Fusion AI</span>
+            <span className="text-white font-semibold text-lg tracking-tight">Converge AI</span>
             <Sidebar size={16} className="ml-auto text-gray-600" />
           </div>
 

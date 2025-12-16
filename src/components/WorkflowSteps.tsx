@@ -132,7 +132,7 @@ export const WorkflowSteps = () => {
             </div>
             <h3 className="text-xl font-bold text-white mb-2">2. Connect your apps</h3>
             <p className="text-gray-400 leading-relaxed">
-              Sync Fusion AI with your tools—CRM, email, Slack, and more.
+              Sync Converge AI with your tools—CRM, email, Slack, and more.
             </p>
           </motion.div>
 
@@ -149,7 +149,7 @@ export const WorkflowSteps = () => {
             </div>
             <h3 className="text-xl font-bold text-white mb-2">3. Let AI do the work</h3>
             <p className="text-gray-400 leading-relaxed">
-              Lets Fusion AI execute tasks automatically.
+              Lets Converge AI execute tasks automatically.
             </p>
           </motion.div>
 

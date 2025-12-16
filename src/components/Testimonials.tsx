@@ -9,7 +9,7 @@ const testimonials = [
   {
     company: "startup",
     logo: TrendingUp,
-    quote: "Automating lead follow-ups boosted our conversion rate by 30% without adding headcount. Fusion AI is a game-changer.",
+    quote: "Automating lead follow-ups boosted our conversion rate by 30% without adding headcount. Converge AI is a game-changer.",
     name: "Audrey Madden",
     role: "Chief Growth Officer",
     image: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
@@ -27,7 +27,7 @@ const testimonials = [
   {
     company: "Logoipsum",
     logo: Hexagon,
-    quote: "Seamless Slack and Salesforce integrations keep our teams aligned. Fusion AI ensures everyone is on the same page.",
+    quote: "Seamless Slack and Salesforce integrations keep our teams aligned. Converge AI ensures everyone is on the same page.",
     name: "Priya Desai",
     role: "Customer Success Lead",
     image: "https://i.pravatar.cc/150?u=a042581f4e29026024d",

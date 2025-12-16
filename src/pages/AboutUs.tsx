@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Linkedin, TrendingUp, Box, Hexagon, Layers, Command, Cpu, Clock, MapPin, ArrowRight } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { CTA } from '../components/CTA';
+import { RollingText } from '../components/ui/RollingText';
 
 // --- ASSETS & DATA ---
 
@@ -33,7 +34,7 @@ const values = [
 const timeline = [
   {
     year: "2023",
-    description: "Conceived Fusion AI, assembled the founding team, built the core LLM engine, and released an alpha prototype to early testers.",
+    description: "Conceived Converge AI, assembled the founding team, built the core LLM engine, and released an alpha prototype to early testers.",
     image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop",
     align: "right"
   },
@@ -203,7 +204,7 @@ const CultureCarousel = () => {
 
 const CareersSection = () => {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-32">
+    <div id="career" className="max-w-7xl mx-auto px-6 py-32">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
         
         {/* Left Column: Info */}
@@ -226,8 +227,8 @@ const CareersSection = () => {
             </p>
           </div>
 
-          <button className="px-8 py-3 rounded-full border border-white/20 text-white font-medium hover:bg-white/10 transition-colors">
-            Contact us
+          <button className="px-8 py-3 rounded-full border border-white/20 text-white font-medium hover:bg-white/10 transition-colors group">
+            <RollingText text="Contact us" />
           </button>
         </div>
 
@@ -256,8 +257,8 @@ const CareersSection = () => {
                 </div>
               </div>
               
-              <button className="px-6 py-2.5 rounded-lg border border-white/10 text-white text-sm font-medium hover:bg-white hover:text-black transition-all whitespace-nowrap">
-                Apply
+              <button className="px-6 py-2.5 rounded-lg border border-white/10 text-white text-sm font-medium hover:bg-white hover:text-black transition-all whitespace-nowrap group">
+                <RollingText text="Apply" />
               </button>
             </motion.div>
           ))}
@@ -421,7 +422,7 @@ export const AboutUs = () => {
       </div>
 
       {/* 6. TEAM SECTION */}
-      <div className="max-w-7xl mx-auto mb-32 px-4 md:px-0">
+      <div id="teams" className="max-w-7xl mx-auto mb-32 px-4 md:px-0">
         <SectionBadge text="Our Team" />
         <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
           Meet the Minds Behind <br /> Our Innovation

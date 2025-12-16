@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Sparkles, 
   MessageCircle, 
   Share2, 
   Calendar, 
@@ -108,7 +107,7 @@ export const InstantActions = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto font-normal leading-relaxed antialiased"
         >
-          Fusion AI helps you tackle data bottlenecks, streamline analysis, and make smarter decisions with ease.
+          Converge AI helps you tackle data bottlenecks, streamline analysis, and make smarter decisions with ease.
         </motion.p>
       </div>
 
@@ -118,7 +117,7 @@ export const InstantActions = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="w-full max-w-6xl bg-[#080808] border border-white/10 rounded-[32px] overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-2xl"
+        className="w-full max-w-6xl bg-gradient-to-br from-[#080808] to-[#020202] border border-white/10 rounded-[32px] overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-2xl"
       >
         
         {/* --- LEFT COLUMN: TEXT CONTENT --- */}
@@ -129,7 +128,7 @@ export const InstantActions = () => {
           </h2>
           
           <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-10 max-w-md">
-            Type an action once—Fusion AI executes it across Slack, WhatsApp, HubSpot, Calendar, and more.
+            Type an action once—Converge AI executes it across Slack, WhatsApp, HubSpot, Calendar, and more.
           </p>
 
           <div className="space-y-6">

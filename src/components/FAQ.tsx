@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
-import { cn } from '../lib/utils';
+import { RollingText } from './ui/RollingText';
 
 const faqs = [
   {
     question: "Which apps can I integrate?",
-    answer: "Fusion AI supports 50+ integrations, including Slack, HubSpot, Zendesk, Salesforce, Google Workspace, WhatsApp, Zapier, and more."
+    answer: "Converge AI supports 50+ integrations, including Slack, HubSpot, Zendesk, Salesforce, Google Workspace, WhatsApp, Zapier, and more."
   },
   {
-    question: "How does Fusion AI automate tasks?",
-    answer: "Fusion AI connects your existing tools and uses intelligent agents to listen for triggers (like a new email or form submission) and execute multi-step workflows automatically."
+    question: "How does Converge AI automate tasks?",
+    answer: "Converge AI connects your existing tools and uses intelligent agents to listen for triggers (like a new email or form submission) and execute multi-step workflows automatically."
   },
   {
-    question: "Is my data secure with Fusion AI?",
+    question: "Is my data secure with Converge AI?",
     answer: "Yes, we prioritize security. All data is encrypted at rest and in transit, and we are SOC2 Type II compliant to ensure your information remains protected."
   },
   {
@@ -26,7 +26,7 @@ export const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="w-full py-24 px-6 relative z-20">
+    <section id="faq" className="w-full py-24 px-6 relative z-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
         
         {/* Left Column: Header */}
@@ -56,8 +56,8 @@ export const FAQ = () => {
               </p>
             </div>
 
-            <button className="px-8 py-3 rounded-full border border-white/20 text-white font-medium hover:bg-white/10 transition-colors">
-              Contact us
+            <button className="w-fit px-8 py-3 rounded-full border border-white/20 text-white font-medium hover:bg-white/10 transition-colors group">
+              <RollingText text="Contact us" />
             </button>
           </motion.div>
         </div>
@@ -71,7 +71,7 @@ export const FAQ = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-[#050505] border border-white/10 rounded-2xl overflow-hidden"
+              className="bg-gradient-to-br from-[#0A0A0A] to-[#050505] border border-white/10 rounded-2xl overflow-hidden"
             >
               <button 
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}

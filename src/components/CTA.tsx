@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { GradientBorder } from './ui/GradientBorder';
+import { RollingText } from './ui/RollingText';
 
 export const CTA = () => {
   return (
@@ -30,7 +31,7 @@ export const CTA = () => {
           transition={{ delay: 0.1 }}
           className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto"
         >
-          Sign up for Fusion AI and let AI handle your routine tasks—no credit card needed.
+          Sign up for Converge AI and let AI handle your routine tasks—no credit card needed.
         </motion.p>
 
         <motion.div 
@@ -44,13 +45,13 @@ export const CTA = () => {
             gradient="from-orange-500 via-red-500 to-orange-600"
             containerClassName="p-[1px] w-full sm:w-auto"
           >
-            <button className="w-full sm:w-auto px-8 py-3.5 text-white font-medium bg-black rounded-full hover:bg-gray-900 transition-colors">
-              Get Started - Free
+            <button className="w-full sm:w-auto px-8 py-3.5 text-white font-medium bg-black rounded-full hover:bg-gray-900 transition-colors group">
+              <RollingText text="Get Started - Free" />
             </button>
           </GradientBorder>
 
-          <button className="w-full sm:w-auto px-8 py-3.5 text-white font-medium border border-white/20 rounded-full hover:bg-white/10 transition-colors">
-            View Pricing
+          <button className="w-full sm:w-auto px-8 py-3.5 text-white font-medium border border-white/20 rounded-full hover:bg-white/10 transition-colors group">
+             <RollingText text="View Pricing" />
           </button>
         </motion.div>
       </div>
