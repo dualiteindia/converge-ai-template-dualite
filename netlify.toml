@@ -1,10 +1,9 @@
 [build]
-  command = "yarn build"
+  command = "yarn install && yarn build"
   publish = "dist"
 
-[build.environment]
+[context.production.environment]
   NODE_VERSION = "20"
-  NPM_FLAGS = "--no-audit"
 
 [[redirects]]
   from = "/*"

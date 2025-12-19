@@ -4,6 +4,11 @@ import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export default tseslint.config(
   { ignores: ["dist", "tailwind.config.js", "postcss.config.js"] },
@@ -32,7 +37,7 @@ export default tseslint.config(
       ...reactHooks.configs.recommended.rules,
       "react/react-in-jsx-scope": "off",
       "react-refresh/only-export-components": ["off", { allowConstantExport: true }],
-      "no-unused-vars": "off", // Changed
+      "no-unused-vars": "off", 
       "react-hooks/rules-of-hooks": "off",
       "react/no-unescaped-entities": "off",
     },
@@ -49,7 +54,7 @@ export default tseslint.config(
     languageOptions: {
       parserOptions: {
         project: "./tsconfig.dualite.json",
-        tsconfigRootDir: import.meta.dirname,
+        tsconfigRootDir: __dirname,
       },
     },
     rules: {
