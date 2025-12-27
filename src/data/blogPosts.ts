@@ -37,65 +37,80 @@ export const blogPosts: BlogPost[] = [
   {
     id: "1",
     title: "Building Long-Lasting Customer in SaaS",
-    excerpt: "Tailor your site's design to meet your financial targets. Easily adjust layouts, colors, and fonts to match your brand without extra cost.",
+    excerpt:
+      "Tailor your site's design to meet your financial targets. Easily adjust layouts, colors, and fonts to match your brand without extra cost.",
     category: "FEATURED",
     date: "MAR 20, 2025",
-    image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=compress&fit=crop",
     featured: true,
-    content: sharedContent
+    content: sharedContent,
   },
   {
     id: "2",
     title: "Maximizing Your ROI with Effective SaaS Solutions",
-    excerpt: "Learn how to optimize your software stack to get the best return on investment for your business.",
+    excerpt:
+      "Learn how to optimize your software stack to get the best return on investment for your business.",
     category: "SAAS",
     date: "MAR 13, 2025",
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop",
-    content: sharedContent
+    image:
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=compress&fit=crop",
+    content: sharedContent,
   },
   {
     id: "3",
     title: "Essential Financial Metrics for Sustainable SaaS Success",
-    excerpt: "Understand the key metrics that drive growth and stability in the subscription economy.",
+    excerpt:
+      "Understand the key metrics that drive growth and stability in the subscription economy.",
     category: "FINANCE",
     date: "FEB 16, 2025",
-    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070&auto=format&fit=crop",
-    content: sharedContent
+    image:
+      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070&auto=compress&fit=crop",
+    content: sharedContent,
   },
   {
     id: "4",
     title: "Integrating Payment Gateways for Seamless Transactions",
-    excerpt: "A guide to choosing and implementing the right payment processor for your global customer base.",
+    excerpt:
+      "A guide to choosing and implementing the right payment processor for your global customer base.",
     category: "AI",
     date: "FEB 16, 2025",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2070&auto=format&fit=crop",
-    content: sharedContent
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2070&auto=compress&fit=crop",
+    content: sharedContent,
   },
   {
     id: "5",
     title: "Why Data Security Is Vital for Every SaaS Platform",
-    excerpt: "Protecting your customer data is not just a requirement, it's a competitive advantage.",
+    excerpt:
+      "Protecting your customer data is not just a requirement, it's a competitive advantage.",
     category: "SAAS",
     date: "FEB 16, 2025",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1470&auto=format&fit=crop",
-    content: sharedContent
+    image:
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1470&auto=compress&fit=crop",
+    content: sharedContent,
   },
   {
     id: "6",
     title: "Site Optimization Techniques to Boost Conversions",
-    excerpt: "Simple tweaks to your landing pages that can significantly increase your signup rates.",
+    excerpt:
+      "Simple tweaks to your landing pages that can significantly increase your signup rates.",
     category: "STARTUP",
     date: "FEB 16, 2025",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
-    content: sharedContent
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=compress&fit=crop",
+    content: sharedContent,
   },
   {
     id: "7",
     title: "Efficient Strategies for Scaling Your SaaS Business",
-    excerpt: "From team structure to tech stack, here is how to prepare your company for rapid growth.",
+    excerpt:
+      "From team structure to tech stack, here is how to prepare your company for rapid growth.",
     category: "AI",
     date: "FEB 16, 2025",
-    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop",
-    content: sharedContent
-  }
+    image:
+      "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=compress&fit=crop",
+    content: sharedContent,
+  },
 ];
+

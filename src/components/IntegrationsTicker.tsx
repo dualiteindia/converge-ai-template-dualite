@@ -1,28 +1,27 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Slack, 
-  Database, 
-  Cloud, 
-  Calendar, 
-  Mail, 
-  MessageSquare, 
-  Github, 
-  Figma, 
-  Trello, 
-  Video, 
-  HardDrive, 
-  Chrome, 
-  Twitter, 
+import { motion } from "framer-motion";
+import {
+  Slack,
+  Database,
+  Cloud,
+  Calendar,
+  Mail,
+  MessageSquare,
+  Github,
+  Figma,
+  Trello,
+  Video,
+  HardDrive,
+  Chrome,
+  Twitter,
   Linkedin,
   Globe,
   Zap,
   Layout,
   Box,
   Server,
-  Code
-} from 'lucide-react';
-import { cn } from '../lib/utils';
+  Code,
+} from "lucide-react";
+import { cn } from "../lib/utils";
 
 // --- Icon Data ---
 
@@ -52,9 +51,22 @@ const iconsRow2 = [
   { icon: Code, color: "text-[#61DAFB]", bg: "bg-[#61DAFB]/10" }, // React
 ];
 
-const IconCard = ({ icon: Icon, color, bg }: { icon: any, color: string, bg: string }) => (
+const IconCard = ({
+  icon: Icon,
+  color,
+  bg,
+}: {
+  icon: any;
+  color: string;
+  bg: string;
+}) => (
   <div className="w-20 h-20 md:w-24 md:h-24 flex-shrink-0 rounded-2xl bg-[#0A0A0A] border border-white/10 flex items-center justify-center hover:border-white/20 hover:bg-white/5 transition-all duration-300 group">
-    <div className={cn("w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110", bg)}>
+    <div
+      className={cn(
+        "w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110",
+        bg
+      )}
+    >
       <Icon size={24} className={cn(color)} />
     </div>
   </div>
@@ -63,7 +75,6 @@ const IconCard = ({ icon: Icon, color, bg }: { icon: any, color: string, bg: str
 export const IntegrationsTicker = () => {
   return (
     <section className="relative w-full py-32 overflow-hidden flex flex-col items-center z-20">
-      
       {/* --- BACKGROUND ORB --- */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0">
         {/* Core Glow */}
@@ -77,7 +88,7 @@ export const IntegrationsTicker = () => {
 
       {/* --- HEADER --- */}
       <div className="relative z-10 flex flex-col items-center text-center mb-20 px-4">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -90,7 +101,7 @@ export const IntegrationsTicker = () => {
           </div>
         </motion.div>
 
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -104,7 +115,6 @@ export const IntegrationsTicker = () => {
 
       {/* --- TICKER SECTION --- */}
       <div className="relative w-full z-10 flex flex-col gap-6 md:gap-8">
-        
         {/* Fade Masks (25% on sides) */}
         <div className="absolute left-0 top-0 bottom-0 w-1/4 bg-gradient-to-r from-[#050505] via-[#050505]/80 to-transparent z-20 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-1/4 bg-gradient-to-l from-[#050505] via-[#050505]/80 to-transparent z-20 pointer-events-none" />
@@ -126,22 +136,24 @@ export const IntegrationsTicker = () => {
             ))}
           </div>
         </div>
-
       </div>
 
       {/* --- FOOTER CTA --- */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.2 }}
         className="relative z-10 mt-16"
       >
-        <button className="px-8 py-3 rounded-full bg-[#0A0A0A] border border-white/10 text-white text-sm font-medium hover:bg-white/5 hover:border-white/20 transition-all">
+        <button
+          className="px-8 py-3 rounded-full bg-[#0A0A0A] border border-white/10 text-white text-sm font-medium hover:bg-white/5 hover:border-white/20 transition-all"
+          name="explore-all"
+        >
           Explore All
         </button>
       </motion.div>
-
     </section>
   );
 };
+

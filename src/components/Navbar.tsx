@@ -1,13 +1,21 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { GradientBorder } from './ui/GradientBorder';
-import { RollingText } from './ui/RollingText';
+import React from "react";
+import { Link } from "react-router-dom";
+import { GradientBorder } from "./ui/GradientBorder";
+import { RollingText } from "./ui/RollingText";
 
-const NavLink = ({ children, href = "#", to }: { children: React.ReactNode; href?: string; to?: string }) => {
+const NavLink = ({
+  children,
+  href = "#",
+  to,
+}: {
+  children: React.ReactNode;
+  href?: string;
+  to?: string;
+}) => {
   if (to) {
     return (
-      <Link 
-        to={to} 
+      <Link
+        to={to}
         className="text-gray-300 hover:text-white text-sm font-medium transition-colors duration-200"
       >
         {children}
@@ -15,8 +23,8 @@ const NavLink = ({ children, href = "#", to }: { children: React.ReactNode; href
     );
   }
   return (
-    <a 
-      href={href} 
+    <a
+      href={href}
       className="text-gray-300 hover:text-white text-sm font-medium transition-colors duration-200"
     >
       {children}
@@ -34,10 +42,12 @@ export const Navbar = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-orange-500 rounded-full animate-spin [animation-duration:10s]"></div>
             <div className="absolute inset-[2px] bg-black rounded-full"></div>
             <div className="absolute inset-0 flex items-center justify-center">
-               <div className="w-2 h-2 bg-white rounded-full shadow-[0_0_10px_white]"></div>
+              <div className="w-2 h-2 bg-white rounded-full shadow-[0_0_10px_white]"></div>
             </div>
           </div>
-          <span className="text-white font-bold text-lg tracking-tight">Converge AI</span>
+          <span className="text-white font-bold text-lg tracking-tight">
+            Converge AI
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -51,15 +61,19 @@ export const Navbar = () => {
         </div>
 
         {/* CTA */}
-        <GradientBorder 
+        <GradientBorder
           gradient="from-orange-500 via-red-500 to-orange-600"
-          containerClassName="rounded-full"
+          containerClassName="rounded-full p-[1px]"
         >
-          <button className="px-5 py-2 text-white text-sm font-medium bg-transparent hover:bg-white/10 transition-colors rounded-full group">
+          <Link
+            to="/waitlist"
+            className="flex items-center px-6 py-2 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-900 transition-colors group shadow-md"
+          >
             <RollingText text="Get Started" />
-          </button>
+          </Link>
         </GradientBorder>
       </div>
     </nav>
   );
 };
+
