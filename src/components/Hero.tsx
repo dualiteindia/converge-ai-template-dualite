@@ -15,7 +15,7 @@ export const Hero = () => {
           playsInline
           preload="auto"
           // @ts-expect-error - fetchPriority is not a valid attribute for video elements
-          fetchPriority="high"
+          fetchpriority="high"
           className="w-full h-full object-cover opacity-30 mix-blend-overlay"
         >
           <source
