@@ -19,7 +19,7 @@ export const Hero = () => {
           className="w-full h-full object-cover opacity-30 mix-blend-overlay"
         >
           <source
-            src="https://69sfgmk1pv2omedb.public.blob.vercel-storage.com/new-templates/converge-ai/bgVid.mp4"
+            src="https://69sfgmk1pv2omedb.public.blob.vercel-storage.com/new-templates/converge-ai/bgVid.webm"
             type="video/mp4"
           />
         </video>
